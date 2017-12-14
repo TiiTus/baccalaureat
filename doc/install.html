@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Titre du projet</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="man-page.css">
+</head>
+<body>
+	<!--En-tete -->
+	<header>
+		<img src="img/lorraine.png" alt="logo LORIA">
+		<h1>Accueil</h1>
+	</header>
+	<div class="main">
+		<!--Menu -->
+		<nav class="nav">
+			<div class="navitem">
+				<a href="index.html">Accueil</a>
+			</div>
+			<div class="navitem">
+				<a href="install.html">Installation</a>
+			</div>
+			<div class="navitem">
+				<a href="guide.html">Utilisation</a>
+			</div>
+			<div class="navitem">
+				<a href="dev.html">Développement</a>
+			</div>
+			<div class="navitem">
+				<a href="licence.html">Licence</a>
+			</div>
+		</nav>
+
+		<!-- Corps -->
+		<article class="article">
+			<p>Comment installer la distribution source de cette application ?</p>
+
+			<h2>Requis</h2>
+			<ol>
+				<li><a href="http://java.sun.com/">JSE</a> (8.0 or more recent)</li>
+				<li>Jakarta <a href="http://ant.apache.org/">Ant</a></li>
+				<li>Serveur MySQL (<a href="https://www.mamp.info/en/">MAMP</a> par exemple)</li>
+			</ol>
+			<h2>Installation</h2>
+			<ol>
+				<li>Téléchargez le dossier compressé.</li>
+				<li>Décompressez le contenu dans un dossier, vous obtenez cette arborescence :</li><br>
+					<img alt="Arborescence fichiers" src="img/arboFiles.png">
+				<li> Pour Créer la base de données, il faut importer le script <i>createdb.sql</i> contenu à la racine de l'application :</li><br>
+				<ul style="list-style-type:square">
+					<li>Selon votre choix, vous pouvez l'importer dans :</li><br>
+						<ul style="list-style-type:circle">
+							<li>MySQLWorkbench : En choisissant le menu <i>File -> Open SQL Script...</i> et choisir <i>createdb.sql</i></li><br>
+							<li>phpMyAdmin : En choisissant l'onglet <i>Import</i> puis cliquer sur <i>Choisir le fichier</i> et choisir <i>createdb.sql</i></li>
+						</ul>
+				</ul><br>
+				<li>Une fois l'importation réussie , ouvrez un terminal de commandes.</li>
+				<li>Tapez les commandes suivantes :</li>
+				<pre class="input">
+					%cd chemin/vers/le/dossier/de/lapplication
+					%ant
+				</pre>
+				</li>
+			</ol>
+
+			<h2>Désinstallation</h2>
+
+			<p>Supprimez simplement le dossier d'installation</p>
+		</article>
+	</div>
+	<!-- Pied de page -->
+	<footer>
+		<table>
+			<tr>
+				<td>Université de Lorraine, Nancy France, 2017</td>
+				<td>Contact :
+					<a href="mailto:julien.hans7@etu.univ-lorraine.fr">Julien Hans</a>
+				</td>
+				</td>
+			</tr>
+		</table>
+	</footer>
+</body>
+</html>

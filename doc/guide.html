@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Titre du projet</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="man-page.css">
+</head>
+
+<body>
+	<!--En-tete -->
+	<header>
+		<img src="img/lorraine.png" alt="logo LORIA">
+		<h1>Guide d'utilisation</h1>
+	</header>
+	<div class="main">
+		<!--Menu -->
+		<nav class="nav">
+			<div class="navitem">
+				<a href="index.html">Accueil</a>
+			</div>
+			<div class="navitem">
+				<a href="install.html">Installation</a>
+			</div>
+			<div class="navitem">
+				<a href="guide.html">Utilisation</a>
+			</div>
+			<div class="navitem">
+				<a href="dev.html">Développement</a>
+			</div>
+			<div class="navitem">
+				<a href="licence.html">Licence</a>
+			</div>
+		</nav>
+
+		<!-- Corps -->
+		<article class="article">
+			<p>Le dossier /<em>bin</em> contient plusieurs scripts (candidat.sh par exemple) pour importer les données des fichiers .csv dans la base de données. Vous devez d'abord compiler vos classes .java :
+
+				<pre class="input">
+					%cd &lt;install directory&gt;
+					%./install.sh (ou install sur Windows)
+				</pre> Ensuite, vous devez exécuter chaque script (sauf template) se trouvant dans le dossier /<em>bin</em> en ayant changer au préalable les paramètres de la commande avec vos paramètres :
+
+				<pre class="input">
+					%cd bin
+			</pre> Ouvrez chaque script pour remplacer les paramètres :
+				<pre class="input">
+					PARAMS="-i ../samples/&lt;nom-fichier&gt; -p &lt;mot-de-passe&gt; -r &lt;uri-bdd&gt; -u &lt;utilisateur-bdd&gt;"
+			</pre> Et enfin, exécutez les :
+				<pre class="input">
+					%./candidat.sh (ou candidat sur Windows)
+			</pre> A ce stade toutes les données contenues dans les fichiers .csv seront contenues dans la base de données créée dans la section "Installation".
+
+		</article>
+	</div>
+	<!-- Pied de page -->
+	<footer>
+		<table>
+			<tr>
+				<td>Université de Lorraine, Nancy France, 2017</td>
+				<td>Contact :
+					<a href="mailto:julien.hans7@etu.univ-lorraine.fr">Julien Hans</a>
+				</td>
+			</tr>
+		</table>
+	</footer>
+</body>
+
+</html>
